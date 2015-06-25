@@ -1,5 +1,6 @@
 require 'bundler'
 Bundler.require
+require_relative "models/model.rb"
 
 class ApplicationController < Sinatra::Base
 
@@ -16,8 +17,22 @@ class ApplicationController < Sinatra::Base
     erb :mash
   end
   
-  get "/results" do
-    erb :results
+  get "/final" do
+    erb :final
   end
 
+  post "/final" do
+    mash = Mash.new(params)
+    var = mash.selector
+    puts var
+    @college = var[:college]
+    @job = var[:job]
+    @so = var[:so]
+    @place = var[:place]
+    @mash = var[:mash]
+    @pet = var[:pet]
+    @kid = var[:kid]
+    erb :final
+  end
+  
 end
