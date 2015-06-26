@@ -1,8 +1,37 @@
 body {
 	text-align:center;
 	background-color:#D5D6DE;
-	font-family:helvetica;
-	
+	font-family: 'Source Sans Pro', sans-serif;
+  color: #095482;
 }
 h1 {
+  color: #095482;
+  background-color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 52px;
+/*   width: 500px;
+  background:center; */
+  opacity: 0.6; 
+  padding: 5px;
+  border: 5px white;
+  margin: 5px;
+}
+h3 {
+  color: #095482;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+h4 {
+  color: #095482;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+form {
+  color: #095482;
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.centered {
+  text-align: center;
+}
+a {
+  color: #5099C7;
 }

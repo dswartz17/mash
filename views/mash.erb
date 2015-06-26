@@ -3,13 +3,20 @@
 <html>
   <head>
     <title>MASH</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
   </head>
   
   <body>
     <h1>MASH</h1>
+    <h4>Welcome, <%= @name %>. This is MASH (which stands for Mansion, Apartment, Shack, House). You write three choices for each category, then choose a magic number between 1 and 5. Then, watch your future unfold before your eyes.</h4>
     <form action="/final" method="post">
-    College:
+      <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+      College:
       <br>
       <input type="text" name="college1">
       <br>
@@ -17,22 +24,8 @@
       <br>
       <input type="text" name="college3">
       <br>
-    Job:
-        <br>
-      <input type="text" name="job1"> 
-        <br>
-      <input type="text" name="job2">
-        <br>
-      <input type="text" name="job3">
-        <br>
-    Significant Other:
-          <br>
-      <input type="text" name="so1">
-          <br>
-      <input type="text" name="so2">
-          <br>
-      <input type="text" name="so3">
-          <br>
+        </div>
+       <div class="col-md-4 col-md-offset-4">  
     Place (Where you will live):
        <br>
       <input type="text" name="place1">
@@ -41,6 +34,27 @@
        <br>
       <input type="text" name="place3">
        <br>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-4">
+    Job:
+        <br>
+      <input type="text" name="job1"> 
+        <br>
+      <input type="text" name="job2">
+        <br>
+      <input type="text" name="job3">
+        <br>
+        </div>
+         <div class="col-md-4">
+           <br>
+           <br>
+     Choose a number between 1 and 5:
+      <input type="text" name="user_num">
+      <input type="submit" value="Play!">
+          </div>
+        <div class="col-md-4">
     Pet:
           <br>
       <input type="text" name="pet1">
@@ -49,6 +63,20 @@
           <br>
       <input type="text" name="pet3">
           <br>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-4">
+    Significant Other:
+          <br>
+      <input type="text" name="so1">
+          <br>
+      <input type="text" name="so2">
+          <br>
+      <input type="text" name="so3">
+      <br>
+        </div>
+        <div class="col-md-4 col-md-offset-4">
     Number of Kids:
            <br>
       <input type="text" name="kid1">
@@ -56,10 +84,14 @@
       <input type="text" name="kid2">
            <br>
       <input type="text" name="kid3">
-           <br>
-    Choose a number between 1 and 5:
+      <br>
+        </div>
+        </div>
+      </div>
+      <br>
+<!--     Choose a number between 1 and 5:
     <input type="text" name="user_num">
-    <input type="submit" value="Play!">
+    <input type="submit" value="Play!"> -->
     </form>
   </body>
 </html>

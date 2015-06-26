@@ -14,6 +14,7 @@ class ApplicationController < Sinatra::Base
   end
   
   post "/mash" do
+    @name = params[:name]
     erb :mash
   end
   
@@ -23,16 +24,19 @@ class ApplicationController < Sinatra::Base
 
   post "/final" do
     mash = Mash.new(params)
-    var = mash.selector
-    puts var
-    @college = var[:college]
-    @job = var[:job]
-    @so = var[:so]
-    @place = var[:place]
-    @mash = var[:mash]
-    @pet = var[:pet]
-    @kid = var[:kid]
+    @var = mash.selector
+#     puts var
+#     @name = var[:name]
+#     @college = @var[:college]
+#     @job = @var[:job]
+#     @so = @var[:so]
+#     @place = @var[:place]
+#     @mash = @var[:mash]
+#     @pet = @var[:pet]
+#     @kid = @var[:kid]
     erb :final
   end
+  
+  
   
 end
